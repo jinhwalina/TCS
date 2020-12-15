@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <!--
+        브라우저 환경에서 사용되는 최소한의 사용자 인터페이스 기능.
+        > alter, prompt, confirm
+
+        < alter >
+        사용자가 확인 버튼을 누를 때까지 메세지를 보여주는 창이 계속 떠있게된다.
+
+        메세지가 있는 작은 창 = 모달창 (modal window) 확인 버튼을 누르기 전까진 모달 창 바깥에 있는 버튼을 누르거나 
+        하는 행동을 할 수 없다! 
+
+        < prompt >
+        브라우저에서 제공하는 prompt함수는 두 개의 인수를 받는다. 
+        result = prompt(title, [default]);
+        함수가 실행되면 텍스트 메세지와 입력필드, 확인 및 취소 버튼이 있는 모달 창을 띄워준다.
+
+        title : 사용자에게 보여줄 문자열
+        default : 입력 필드의 초기값(선택값)
+        이 때! 대괄호의 의미는 매개변수가 필수가 아닌 선택값이라는 것을 의미한다. 
+
+        let age = prompt('나이를 입력해주세요.', 100);
+        alter(`당신의 나이는 ${age}살 입니다.`); // 당신의 나이는 100살입니다. ( 초기값으로 100을 설정해줬기 때문! )
+        
+        ** 인터넷 익스플로러에서는 항상 기본값을 넣어줘야한다. **
+
+        < confirm >
+        사용자가 확인 또는 취소 버튼을 누를 때까지 메세지가 창에 보여진다.
+
+        사용자가 확인 버튼을 누르면 true 를!
+        취소버튼이나 esc를 누르면 false 를! 
+
+        ** 문법 ! result = confirm(question);
+        
+        let isBoss = confirm("당신이 주인인가요 ?");
+        alert(isBoss);
+
+    -->
+
+    <script>
+
+
+        let name = prompt( '당신의 이름은 무엇인가요?', '' );
+        // 이렇게 쓸 경우, 질문 밑에 입력창이 뜨면서 alert창이 뜬다.
+        alert(`당신의 이름은 ${name} 입니다.`);
+
+
+    </script>
+</body>
+</html>

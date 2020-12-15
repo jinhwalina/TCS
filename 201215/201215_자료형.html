@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <!-- 자료형
         
@@ -45,10 +47,42 @@
          < undefined 값 >
          null 값처럼 자신만의 자료형을 형성합니다. '값이 할당되지 않은 상태'를 나타낼 때 사용한다.
          
+         < 객체와 심볼 > 
+         객체(object)형은 특수한 자료형이다.
+         객체형을 제외한 다른 자료형은 문자열이든 숫자든 한 가지만 표현할 수 있다.
+         심볼(symbol)형은 객체의 고유한 식별자를 만들 때 사용된다. 
+
+         < typeof 연산자 >
+         이 연산자는 인수의 자료형을 반환한다. 자료형에 따라 처리 방식을 다르게 하고 싶거나 
+         변수의 자료형을 빠르게 알아내고자 할 때 유용하다.
+
+         두 가지 형태 ( 괄호가 있든 없든 결과는 동일하다 )
+         1. 연산자 : typeof x
+         2. 함수 : typeof(x)
+
+         ***** 설명이 필요한 부분 
+         typeof Math // "object"  (1)
+            > Math같은 경우 수학 연산을 제공하는 내장 객체이기때문에 object가 출력된다.
+         typeof null // "object"  (2)
+            > null은 별도의 고유한 자료형을 가지는 특수 값이다. 
+              하위 호환성을 유지하기 위해 이런 오류를 수정하지 않고 남겨둔 상황! 언어 자체의 오류이기에 
+              null이 객체가 아님에 유의해야한다.
+         typeof alert // "function"  (3)
+            > 피연산자가 함수면 function을 반환한다. 그래서 function을 출력!
+              함수는 객체형에 속한다.
+
     -->
     <script>
+        /* 아래 스크립트의 결과를 예측해 보세요. */
+        let name = "Ilya";
 
+        alert(`hello ${1}`); // hello 1
+
+        alert(`hello ${"name"}`); // hello name ( " " 안에 있기때문에 name 이라는 문자열 출력  )
+
+        alert(`hello ${name}`); // hello Ilya
 
     </script>
 </body>
+
 </html>
